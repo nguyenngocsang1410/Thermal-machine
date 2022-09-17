@@ -1,6 +1,7 @@
-#include <Adafruit_MAX31856.h>
-#include <AccelStepper.h>
-#include <SPI.h>
+# 1 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+# 2 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino" 2
+# 3 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino" 2
+# 4 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino" 2
 
 // Define motor interface
 const uint8_t M1_STEP_PIN = 3; // Y
@@ -10,14 +11,14 @@ const uint8_t M1_DIR_PIN = 5;
 const uint8_t M2_DIR_PIN = 7;
 
 // Define motor interface type
-#define motorInterfaceType 1
-#define M1_MODE 32
-#define M2_MODE 16
-// Creates an instance
-AccelStepper M1_Stepper(motorInterfaceType, M1_STEP_PIN, M1_DIR_PIN);
-AccelStepper M2_Stepper(motorInterfaceType, M2_STEP_PIN, M2_DIR_PIN);
 
-#define DRDY_PIN 2
+
+
+// Creates an instance
+AccelStepper M1_Stepper(1, M1_STEP_PIN, M1_DIR_PIN);
+AccelStepper M2_Stepper(1, M2_STEP_PIN, M2_DIR_PIN);
+
+
 Adafruit_MAX31856 maxthermo = Adafruit_MAX31856(10);
 
 float tempe_buffer = 0;
@@ -52,10 +53,10 @@ void setup()
 {
     Serial.begin(115200);
     motorSetup();
-    M1_Stepper.setCurrentPosition();
-    M2_Stepper.setCurrentPosition();
+    // M2_Stepper.setCurrentPosition();
+    // M1_Stepper.setCurrentPosition();
 
-    pinMode(DRDY_PIN, INPUT);
+    pinMode(2, 0x0);
 
     if (!maxthermo.begin())
     {
@@ -69,7 +70,7 @@ void setup()
     maxthermo.setThermocoupleType(MAX31856_TCTYPE_T);
     maxthermo.setConversionMode(MAX31856_CONTINUOUS);
 
-    attachInterrupt(digitalPinToInterrupt(2), readSensor, FALLING);
+    attachInterrupt(((2) == 2 ? 0 : ((2) == 3 ? 1 : -1)), readSensor, 2);
 }
 char c;
 bool sendFlag = 0, continueMode = 0;
@@ -115,7 +116,7 @@ void M1_IN()
 }
 void M1_OUT()
 {
-    M1_Stepper.move(M1_MODE*(100/4));
+    M1_Stepper.move(32*(100/4));
 }
 void M2_IN()
 {
@@ -123,7 +124,7 @@ void M2_IN()
 }
 void M2_OUT()
 {
-    M2_Stepper.move(-M2_MODE*(100/4));
+    M2_Stepper.move(-16*(100/4));
 }
 void tempRead()
 {

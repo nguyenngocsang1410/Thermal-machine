@@ -1,3 +1,5 @@
+#include <Arduino.h>
+#line 1 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
 #include <Adafruit_MAX31856.h>
 #include <AccelStepper.h>
 #include <SPI.h>
@@ -22,6 +24,29 @@ Adafruit_MAX31856 maxthermo = Adafruit_MAX31856(10);
 
 float tempe_buffer = 0;
 
+#line 25 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+void motorSetup();
+#line 37 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+char handleSerial();
+#line 51 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+void setup();
+#line 77 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+void loop();
+#line 107 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+void runMotor();
+#line 112 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+void M1_IN();
+#line 116 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+void M1_OUT();
+#line 120 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+void M2_IN();
+#line 124 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+void M2_OUT();
+#line 128 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+void tempRead();
+#line 133 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+void readSensor();
+#line 25 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
 void motorSetup()
 {
     // set the maximum speed, acceleration factor,
@@ -52,8 +77,8 @@ void setup()
 {
     Serial.begin(115200);
     motorSetup();
-    M1_Stepper.setCurrentPosition();
-    M2_Stepper.setCurrentPosition();
+    // M2_Stepper.setCurrentPosition();
+    // M1_Stepper.setCurrentPosition();
 
     pinMode(DRDY_PIN, INPUT);
 

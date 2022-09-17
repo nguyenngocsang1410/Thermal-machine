@@ -1,6 +1,7 @@
 {
-    "sketch": "project\\thermal_machine.ino",
+    "sketch": "project\\thermal_machine\\thermal_machine.ino",
     "board": "arduino:avr:uno",
     "port": "COM9",
-    "programmer": "arduino:avrispmkii"
+    "programmer": "arduino:avrispmkii",
+    "output": "./build"
 }
