@@ -1,5 +1,5 @@
 {
-    "sketch": "project\\thermal_machine\\thermal_machine.ino",
+    "sketch": "continous\\max31856_continuous.ino",
     "board": "arduino:avr:uno",
     "port": "COM9",
     "programmer": "arduino:avrispmkii",

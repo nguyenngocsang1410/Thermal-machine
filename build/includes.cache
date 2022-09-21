@@ -10,27 +10,22 @@
     "Includepath": "C:\\Users\\SangNguyen\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\variants\\standard"
   },
   {
-    "Sourcefile": "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\build\\sketch\\thermal_machine.ino.cpp",
+    "Sourcefile": "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\build\\sketch\\max31856_continuous.ino.cpp",
     "Include": "Adafruit_MAX31856.h",
     "Includepath": "E:\\Documents\\Arduino\\libraries\\Adafruit_MAX31856_library"
   },
   {
-    "Sourcefile": "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\build\\sketch\\thermal_machine.ino.cpp",
+    "Sourcefile": "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\build\\sketch\\max31856_continuous.ino.cpp",
     "Include": "Adafruit_SPIDevice.h",
     "Includepath": "E:\\Documents\\Arduino\\libraries\\Adafruit_BusIO"
   },
   {
-    "Sourcefile": "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\build\\sketch\\thermal_machine.ino.cpp",
+    "Sourcefile": "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\build\\sketch\\max31856_continuous.ino.cpp",
     "Include": "SPI.h",
     "Includepath": "C:\\Users\\SangNguyen\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\libraries\\SPI\\src"
   },
   {
-    "Sourcefile": "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\build\\sketch\\thermal_machine.ino.cpp",
-    "Include": "AccelStepper.h",
-    "Includepath": "E:\\Documents\\Arduino\\libraries\\AccelStepper\\src"
-  },
-  {
-    "Sourcefile": "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\build\\sketch\\thermal_machine.ino.cpp",
+    "Sourcefile": "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\build\\sketch\\max31856_continuous.ino.cpp",
     "Include": "",
     "Includepath": null
   },
@@ -61,16 +56,6 @@
   },
   {
     "Sourcefile": "C:\\Users\\SangNguyen\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\libraries\\SPI\\src\\SPI.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "E:\\Documents\\Arduino\\libraries\\AccelStepper\\src\\AccelStepper.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "E:\\Documents\\Arduino\\libraries\\AccelStepper\\src\\MultiStepper.cpp",
     "Include": "",
     "Includepath": null
   },

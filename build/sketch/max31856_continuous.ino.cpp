@@ -1,16 +1,22 @@
-# 1 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\continous\\max31856_continuous.ino"
+#include <Arduino.h>
+#line 1 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\continous\\max31856_continuous.ino"
 // This example demonstrates continuous conversion mode using the
 // DRDY pin to check for conversion completion.
 
-# 5 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\continous\\max31856_continuous.ino" 2
+#include <Adafruit_MAX31856.h>
 
-
+#define DRDY_PIN 3
 
 // Use software SPI: CS, DI, DO, CLK
 // Adafruit_MAX31856 maxthermo = Adafruit_MAX31856(10, 11, 12, 13);
 // use hardware SPI, just pass in the CS pin
 Adafruit_MAX31856 maxthermo = Adafruit_MAX31856(10);
 
+#line 13 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\continous\\max31856_continuous.ino"
+void setup();
+#line 72 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\continous\\max31856_continuous.ino"
+void loop();
+#line 13 "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\continous\\max31856_continuous.ino"
 void setup()
 {
   Serial.begin(115200);
@@ -18,7 +24,7 @@ void setup()
     delay(10);
   Serial.println("MAX31856 thermocouple test");
 
-  pinMode(3, 0x0);
+  pinMode(DRDY_PIN, INPUT);
 
   if (!maxthermo.begin())
   {
@@ -74,7 +80,7 @@ void loop()
 {
   // The DRDY output goes low when a new conversion result is available
   int count = 0;
-  while (digitalRead(3))
+  while (digitalRead(DRDY_PIN))
   {
     if (count++ > 200)
     {

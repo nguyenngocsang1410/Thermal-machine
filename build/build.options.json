@@ -8,5 +8,5 @@
   "hardwareFolders": "D:\\Arduino\\Arduino_1.x\\Arduino\\hardware,C:\\Users\\SangNguyen\\AppData\\Local\\Arduino15\\packages",
   "otherLibrariesFolders": "E:\\Documents\\Arduino\\libraries",
   "runtime.ide.version": "10819",
-  "sketchLocation": "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\project\\thermal_machine\\thermal_machine.ino"
+  "sketchLocation": "e:\\Documents\\Lab\\Thermal machine\\Thermal-machine\\continous\\max31856_continuous.ino"
 }
